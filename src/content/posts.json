@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "optimizando-rendimiento-react",
+    "title": "Optimizando el Rendimiento en React: Guía Completa",
+    "excerpt": "Aprende las mejores técnicas para optimizar el rendimiento de tus aplicaciones React, desde memo y useMemo hasta lazy loading y code splitting.",
+    "date": "2026-01-15",
+    "readTime": 8,
+    "image": null,
+    "content": "El rendimiento es crucial en cualquier aplicación web moderna. En este artículo exploraremos las técnicas más efectivas para optimizar tus aplicaciones React.\n\n## React.memo\n\nUna de las formas más simples de evitar re-renders innecesarios es usando `React.memo()`. Este HOC memoriza el componente y solo lo re-renderiza cuando sus props cambian.\n\n## useMemo y useCallback\n\nEstos hooks son esenciales para memorizar valores computados y funciones respectivamente. Úsalos cuando tengas cálculos costosos o cuando pases callbacks a componentes hijos optimizados.\n\n## Lazy Loading\n\nCon `React.lazy()` y `Suspense`, puedes cargar componentes de forma diferida, reduciendo el bundle inicial de tu aplicación.\n\n## Conclusión\n\nOptimizar React no es complicado si conoces las herramientas disponibles. Mide primero con React DevTools y optimiza solo donde sea necesario."
+  },
+  {
+    "slug": "typescript-tips-avanzados",
+    "title": "10 Tips Avanzados de TypeScript que Deberías Conocer",
+    "excerpt": "Descubre técnicas avanzadas de TypeScript que mejorarán la calidad de tu código y tu productividad como desarrollador.",
+    "date": "2026-01-08",
+    "readTime": 6,
+    "image": null,
+    "content": "TypeScript ha revolucionado el desarrollo JavaScript. Aquí te comparto 10 tips que uso a diario.\n\n## 1. Utility Types\n\nTypeScript incluye tipos utilitarios como `Partial<T>`, `Required<T>`, `Pick<T, K>` y `Omit<T, K>` que simplifican enormemente la manipulación de tipos.\n\n## 2. Template Literal Types\n\nDesde TypeScript 4.1, puedes crear tipos basados en templates de strings, permitiendo validaciones más precisas.\n\n## 3. Conditional Types\n\nLos tipos condicionales `T extends U ? X : Y` permiten crear tipos dinámicos basados en condiciones.\n\n## 4. Type Guards\n\nLas funciones de tipo guard ayudan a TypeScript a inferir tipos en bloques condicionales.\n\n## Conclusión\n\nDominar estas técnicas te convertirá en un desarrollador TypeScript más eficiente."
+  },
+  {
+    "slug": "arquitectura-frontend-2026",
+    "title": "Arquitectura Frontend Moderna en 2026",
+    "excerpt": "Un análisis de las tendencias actuales en arquitectura frontend: Server Components, Islands Architecture y más.",
+    "date": "2025-12-28",
+    "readTime": 10,
+    "image": null,
+    "content": "El frontend evoluciona constantemente. Veamos las tendencias arquitectónicas más relevantes de 2026.\n\n## Server Components\n\nReact Server Components han cambiado la forma en que pensamos sobre el renderizado. Permiten ejecutar componentes en el servidor, reduciendo el JavaScript enviado al cliente.\n\n## Islands Architecture\n\nEsta arquitectura, popularizada por Astro, permite tener páginas mayormente estáticas con 'islas' de interactividad.\n\n## Micro Frontends\n\nPara equipos grandes, los micro frontends permiten desarrollar y deployar partes de la aplicación de forma independiente.\n\n## Edge Computing\n\nCon plataformas como Vercel Edge y Cloudflare Workers, el código se ejecuta más cerca del usuario.\n\n## Conclusión\n\nNo hay una arquitectura perfecta. Elige basándote en las necesidades de tu proyecto y equipo."
+  }
+]
+

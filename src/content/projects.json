@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "E-Commerce Platform",
+    "description": "Plataforma de comercio electrónico full-stack con carrito de compras, pagos con Stripe y panel de administración.",
+    "image": null,
+    "tags": ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+    "demo": "https://ecommerce-demo.com",
+    "github": "https://github.com/username/ecommerce"
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "description": "Aplicación de gestión de tareas con drag & drop, colaboración en tiempo real y notificaciones.",
+    "image": null,
+    "tags": ["React", "Node.js", "Socket.io", "MongoDB"],
+    "demo": "https://tasks-demo.com",
+    "github": "https://github.com/username/tasks"
+  },
+  {
+    "id": 3,
+    "title": "AI Content Generator",
+    "description": "Herramienta de generación de contenido usando IA con múltiples modelos y plantillas personalizables.",
+    "image": null,
+    "tags": ["React", "OpenAI", "Python", "FastAPI"],
+    "demo": "https://ai-content.com",
+    "github": "https://github.com/username/ai-content"
+  },
+  {
+    "id": 4,
+    "title": "Fitness Tracker",
+    "description": "Aplicación móvil para seguimiento de ejercicios, nutrición y progreso con gráficos interactivos.",
+    "image": null,
+    "tags": ["React Native", "Firebase", "Charts.js"],
+    "demo": null,
+    "github": "https://github.com/username/fitness"
+  },
+  {
+    "id": 5,
+    "title": "Portfolio Dashboard",
+    "description": "Dashboard para inversores con datos en tiempo real, análisis de mercado y alertas personalizadas.",
+    "image": null,
+    "tags": ["Vue.js", "D3.js", "WebSockets", "Redis"],
+    "demo": "https://portfolio-dash.com",
+    "github": "https://github.com/username/portfolio-dash"
+  },
+  {
+    "id": 6,
+    "title": "Weather App",
+    "description": "Aplicación del clima con pronósticos a 7 días, mapas interactivos y widgets personalizables.",
+    "image": null,
+    "tags": ["React", "OpenWeather API", "Mapbox"],
+    "demo": "https://weather-app.com",
+    "github": "https://github.com/username/weather"
+  }
+]
+
