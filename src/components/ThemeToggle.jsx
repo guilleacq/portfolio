@@ -1,28 +1,10 @@
-import { useState, useEffect } from 'react'
+// src/components/ThemeToggle.jsx
 import { motion } from 'framer-motion'
-import { Sun, Moon} from 'lucide-react'
+import { Sun, Moon } from 'lucide-react'
+import { useTheme } from '../hooks/useTheme'
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') || 'dark'
-    }
-    return 'dark'
-  })
-
-  useEffect(() => {
-    const root = window.document.documentElement
-    if (theme === 'dark') {
-      root.classList.add('dark')
-    } else {
-      root.classList.remove('dark')
-    }
-    localStorage.setItem('theme', theme)
-  }, [theme])
-
-  const toggleTheme = () => {
-    setTheme(prev => (prev === 'light' ? 'dark' : 'light'))
-  }
+  const { theme, toggleTheme } = useTheme()
 
   return (
     <motion.button
@@ -33,9 +15,9 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {theme === 'light' ? (
-        <Moon className='w-5 h-5' />
+        <Moon className="w-5 h-5" />
       ) : (
-        <Sun className='w-5 h-5' />
+        <Sun className="w-5 h-5" />
       )}
     </motion.button>
   )
