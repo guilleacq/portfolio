@@ -12,7 +12,7 @@ export default function Blog() {
   const latestPosts = posts.slice(0, 3)
 
   return (
-    <section id="blog" className="py-24 md:py-32 bg-white">
+    <section id="blog" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         {/* Section Header */}
         <motion.div

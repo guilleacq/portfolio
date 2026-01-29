@@ -7,10 +7,10 @@ export default function ProjectCard({ project, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative bg-white rounded-2xl overflow-hidden border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5"
+      className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:shadow-accent/5"
     >
       {/* Image */}
-      <div className="aspect-video overflow-hidden bg-gray-100">
+      <div className="aspect-video overflow-hidden bg-placeholder">
         {project.image ? (
           <img
             src={project.image}
@@ -18,8 +18,8 @@ export default function ProjectCard({ project, index }) {
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-            <span className="text-4xl font-heading font-bold text-gray-300">
+          <div className="w-full h-full flex items-center justify-center bg-placeholder">
+            <span className="text-4xl font-heading font-bold text-placeholder-foreground">
               {project.title.charAt(0)}
             </span>
           </div>

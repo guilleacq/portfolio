@@ -2,13 +2,15 @@
 
 @theme {
   /* Colors */
-  --color-background: #FAFAFA;
-  --color-foreground: #1A1A1A;
-  --color-muted: #6B7280;
-  --color-accent: #2563EB;
-  --color-accent-hover: #1D4ED8;
-  --color-border: #E5E7EB;
-  --color-card: #FFFFFF;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-placeholder: var(--placeholder-bg);
+  --color-placeholder-foreground: var(--placeholder-text);
   
   /* Fonts */
   --font-heading: 'Sora', sans-serif;
@@ -16,6 +18,32 @@
   
   /* Animations */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --background: #FAFAFA;
+  --foreground: #1A1A1A;
+  --muted: #64748B;
+  --accent: #d21010cc;
+  --accent-hover: #a10303;
+  --border: #E2E8F0;
+  --card: #FFFFFF;
+  --selection-text: #FFFFFF;
+  --placeholder-bg: #F1F5F9;
+  --placeholder-text: #CBD5E1;
+}
+
+.dark {
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
+  --muted: #A1A1AA;
+  --accent: #7DD3FC;
+  --accent-hover: #38BDF8;
+  --border: #27272A;
+  --card: #111111;
+  --selection-text: #000000;
+  --placeholder-bg: #18181B;
+  --placeholder-text: #3F3F46;
 }
 
 @layer base {
@@ -36,6 +64,7 @@
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -51,7 +80,7 @@
   
   ::selection {
     background-color: var(--color-accent);
-    color: white;
+    color: var(--selection-text);
   }
 }
 

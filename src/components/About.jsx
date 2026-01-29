@@ -35,7 +35,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-white">
+    <section id="about" className="py-24 md:py-32 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -52,8 +52,8 @@ export default function About() {
               <div className="absolute -inset-4 bg-accent/10 rounded-3xl rotate-3" />
               
               {/* Avatar placeholder */}
-              <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl w-full h-full flex items-center justify-center overflow-hidden">
-                <div className="text-8xl font-heading font-bold text-gray-300">
+              <div className="relative bg-placeholder rounded-2xl w-full h-full flex items-center justify-center overflow-hidden border border-border">
+                <div className="text-8xl font-heading font-bold text-placeholder-foreground">
                   GA
                 </div>
                 {/* If you have an actual image, replace the above div with:
@@ -118,14 +118,13 @@ export default function About() {
               </div>
             </motion.div>
 
-            {/* Download CV Button */}
+            {/* Contact Button */}
             <motion.div variants={itemVariants} className="mt-8">
               <motion.a
-                href="/cv.pdf"
-                download
+                href="mailto:guillermoacq@gmail.com"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-white rounded-full font-medium hover:bg-accent transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full font-medium hover:bg-accent hover:text-white transition-colors"
               >
                 <svg
                   className="w-5 h-5"
@@ -137,10 +136,10 @@ export default function About() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                Descargar CV
+                Contactar conmigo
               </motion.a>
             </motion.div>
           </div>

@@ -21,7 +21,7 @@ export default function BlogCard({ post, index }) {
       <Link to={`/blog/${post.slug}`} className="block">
         {/* Image */}
         {post.image && (
-          <div className="aspect-video overflow-hidden rounded-xl mb-4 bg-gray-100">
+          <div className="aspect-video overflow-hidden rounded-xl mb-4 bg-placeholder border border-border">
             <img
               src={post.image}
               alt={post.title}

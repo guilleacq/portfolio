@@ -78,9 +78,9 @@ export default function Hero() {
         {/* Role */}
         <motion.p
           variants={itemVariants}
-          className="text-muted text-base sm:text-lg md:text-xl lg:text-xl mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-muted text-base sm:text-lg md:text-xl lg:text-xl mb-10 sm:mb-12 max-w-3xl mx-auto leading-relaxed mt-10"
         >
-          I'm a product engineer, passionate about the art of learning and building products that help people.
+          Product engineer and full stack developer, passionate about the art of learning and building products that help people.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -96,7 +96,7 @@ export default function Hero() {
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base bg-foreground text-white rounded-full font-medium hover:bg-accent transition-colors"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base bg-foreground text-background rounded-full font-medium hover:bg-accent hover:text-white transition-colors"
           >
             View Projects
           </motion.a>
@@ -110,7 +110,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base border border-border rounded-full font-medium hover:border-foreground transition-colors"
           >
-            Learn More
+            About Me
           </motion.a>
         </motion.div>
       </motion.div>
