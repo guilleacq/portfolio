@@ -52,17 +52,17 @@ export default function About() {
               <div className="absolute -inset-4 bg-accent/10 rounded-3xl rotate-3" />
               
               {/* Avatar placeholder */}
-              <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl w-full h-full flex items-center justify-center overflow-hidden">
-                <div className="text-8xl font-heading font-bold text-gray-300">
+              <div className="relative bg-placeholder rounded-2xl w-full h-full flex items-center justify-center overflow-hidden border border-border">
+                {/* <div className="text-8xl font-heading font-bold text-placeholder-foreground">
                   GA
-                </div>
-                {/* If you have an actual image, replace the above div with:
+                </div> */}
+                {/* If you have an actual image, replace the above div with: */}
                 <img 
-                  src="/avatar.jpg" 
+                  src="/pfp.png" 
                   alt="Guillermo Acquistapace"
                   className="w-full h-full object-cover"
                 />
-                */}
+               
               </div>
             </div>
           </motion.div>
