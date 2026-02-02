@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Search, X } from 'lucide-react';
 
 /**
  * Search input component with icon
@@ -6,20 +7,7 @@ import PropTypes from 'prop-types';
 const SearchInput = ({ value, onChange, placeholder = 'Search...' }) => {
   return (
     <div className="search-container">
-      <svg
-        className="search-icon"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <path d="m21 21-4.35-4.35" />
-      </svg>
+      <Search className="search-icon" size={18} strokeWidth={1.5} />
       <input
         type="text"
         className="search-input"
@@ -34,19 +22,7 @@ const SearchInput = ({ value, onChange, placeholder = 'Search...' }) => {
           onClick={() => onChange('')}
           aria-label="Clear search"
         >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <X size={16} strokeWidth={2} />
         </button>
       )}
     </div>

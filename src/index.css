@@ -309,14 +309,13 @@ section {
 }
 
 .section-title-arrow {
-  opacity: 0;
-  transform: translateX(-10px);
+  opacity: 1;
+  transform: translateX(0);
   transition: all 0.3s ease;
 }
 
 .section-title--linked:hover .section-title-arrow {
-  opacity: 1;
-  transform: translateX(0);
+  transform: translateX(5px);
 }
 
 /* View All Link */
