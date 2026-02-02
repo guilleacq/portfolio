@@ -112,13 +112,13 @@ const Projects = () => {
     <div className="projects-page">
       <div className="container">
         <header className="projects-header">
+          <div className="availability-badge">
+            <span className="availability-dot"></span>
+            Currently open to new opportunities
+          </div>
           <h1 className="projects-page-title">Projects</h1>
           <p className="projects-page-subtitle">
             A selection of work I've shipped — from mobile apps to VR experiences.
-            <br />
-            <span className="projects-page-note">
-              Currently open to Full Stack and React Native opportunities.
-            </span>
           </p>
         </header>
 
