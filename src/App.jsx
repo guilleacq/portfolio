@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Projects from './pages/Projects';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
+import ScrollToTop from './components/scrollToTop';
 
 /**
  * Main App component - handles routing and layout structure
@@ -12,7 +13,9 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
+      
       <div className="app-wrapper">
+        <ScrollToTop />
         <ScrollIndicator />
         <Navbar />
 
