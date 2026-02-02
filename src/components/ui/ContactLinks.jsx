@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 /**
  * Individual contact link component
  */
-const ContactLink = ({ label, href, isExternal }) => {
+const ContactLink = ({ label, href, isExternal, icon: Icon }) => {
   const externalProps = isExternal
     ? { target: '_blank', rel: 'noopener noreferrer' }
     : {};
 
   return (
     <a href={href} className="contact-link" {...externalProps}>
-      {label}
+      {Icon && <Icon size={18} strokeWidth={1.5} />}
+      <span>{label}</span>
     </a>
   );
 };
@@ -19,6 +20,7 @@ ContactLink.propTypes = {
   label: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   isExternal: PropTypes.bool,
+  icon: PropTypes.elementType,
 };
 
 /**
@@ -33,6 +35,7 @@ const ContactLinks = ({ links }) => {
           label={link.label}
           href={link.href}
           isExternal={link.isExternal}
+          icon={link.icon}
         />
       ))}
     </div>
@@ -45,6 +48,7 @@ ContactLinks.propTypes = {
       label: PropTypes.string.isRequired,
       href: PropTypes.string.isRequired,
       isExternal: PropTypes.bool,
+      icon: PropTypes.elementType,
     })
   ).isRequired,
 };

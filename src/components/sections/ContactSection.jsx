@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import ContactLinks from '../ui/ContactLinks';
+import { Linkedin, Github, Mail } from 'lucide-react';
 
 /**
  * Contact section configuration
@@ -9,10 +10,9 @@ const CONTACT_CONTENT = {
   description:
     "I'm always up for interesting work — whether it's a web app, mobile project, or something I haven't tried yet. Drop me a line.",
   links: [
-    { label: 'Email', href: 'mailto:guillermoacq@gmail.com', isExternal: false },
-    { label: 'GitHub', href: 'https://github.com', isExternal: true },
-    { label: 'LinkedIn', href: 'https://linkedin.com', isExternal: true },
-    { label: 'WhatsApp', href: 'https://wa.me/59891003020', isExternal: true },
+    { label: 'Email', icon: Mail, href: 'mailto:guillermoacq@gmail.com', isExternal: false },
+    { label: 'GitHub', icon: Github, href: 'https://github.com', isExternal: true },
+    { label: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com', isExternal: true },
   ],
 };
 
