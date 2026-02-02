@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import ScrollIndicator from './components/ScrollIndicator';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
 import Blog from './pages/Blog';
 import Footer from './components/Footer';
 import ScrollToTop from './components/scrollToTop';
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/blog" element={<Blog />} />
           </Routes>
         </main>
