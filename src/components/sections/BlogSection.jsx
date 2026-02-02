@@ -43,7 +43,7 @@ const BlogSection = () => {
           Writing
         </SectionTitle>
         <div className="blog-grid">
-          {BLOG_DATA.map((post, index) => (
+          {BLOG_DATA.slice(0, 2).map((post, index) => (
             <BlogCard
               key={post.id}
               post={post}
