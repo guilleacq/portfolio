@@ -2,18 +2,6 @@ import PropTypes from 'prop-types';
 import { Github, ExternalLink } from 'lucide-react';
 
 /**
- * Status badge component
- */
-const StatusBadge = ({ status }) => {
-  const statusClass = status.toLowerCase().replace(' ', '-');
-  return <span className={`project-status project-status--${statusClass}`}>{status}</span>;
-};
-
-StatusBadge.propTypes = {
-  status: PropTypes.string.isRequired,
-};
-
-/**
  * Project list card component - detailed view for recruiters
  */
 const ProjectListCard = ({ project }) => {
@@ -22,11 +10,8 @@ const ProjectListCard = ({ project }) => {
     role,
     company,
     period,
-    type,
     description,
-    highlights,
     tags,
-    status,
     links,
   } = project;
 
@@ -37,7 +22,6 @@ const ProjectListCard = ({ project }) => {
       <div className="project-list-header">
         <div className="project-list-title-row">
           <h2 className="project-list-title">{title}</h2>
-          <StatusBadge status={status} />
         </div>
         <div className="project-list-meta">
           <span className="project-list-role">{role}</span>
@@ -45,26 +29,19 @@ const ProjectListCard = ({ project }) => {
           <span className="project-list-company">{company}</span>
           <span className="project-list-separator">·</span>
           <span className="project-list-period">{period}</span>
-          <span className="project-list-separator">·</span>
-          <span className="project-list-type">{type}</span>
         </div>
       </div>
 
       <p className="project-list-description">{description}</p>
 
-      <ul className="project-list-highlights">
-        {highlights.map((highlight, index) => (
-          <li key={index}>{highlight}</li>
-        ))}
-      </ul>
-
       <div className="project-list-footer">
         <div className="project-list-tags">
-          {tags.map((tag) => (
+          {tags.slice(0, 4).map((tag) => (
             <span key={tag} className="project-list-tag">
               {tag}
             </span>
           ))}
+          {tags.length > 4 && <span className="project-list-tag-more">+{tags.length - 4}</span>}
         </div>
 
         {hasLinks && (
@@ -107,11 +84,8 @@ ProjectListCard.propTypes = {
     role: PropTypes.string.isRequired,
     company: PropTypes.string.isRequired,
     period: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
     tags: PropTypes.arrayOf(PropTypes.string).isRequired,
-    status: PropTypes.string.isRequired,
     links: PropTypes.shape({
       github: PropTypes.string,
       live: PropTypes.string,
