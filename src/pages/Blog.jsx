@@ -1,57 +1,8 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import BlogListItem from '../components/ui/BlogListItem';
 import SearchInput from '../components/ui/SearchInput';
-
-/**
- * Blog entries data - sorted by date (newest first)
- */
-const BLOG_ENTRIES = [
-  {
-    id: 1,
-    date: '2026-02-15',
-    title: 'What IT Support Taught Me About Building Software',
-    excerpt:
-      "Before I wrote my first line of production code, I spent a year helping people fix their problems. Here's what that taught me about understanding users and solving real problems.",
-    readTime: '5 min read',
-    tags: ['Career', 'Lessons'],
-  },
-  {
-    id: 2,
-    date: '2026-02-01',
-    title: 'Two Years in VR Development: The Good and The Hard',
-    excerpt:
-      'Lessons from building games and experiences for Meta Quest at Kreitech — from performance optimization tricks to working effectively in agile teams.',
-    readTime: '8 min read',
-    tags: ['VR', 'Unity', 'Game Dev'],
-  },
-  {
-    id: 3,
-    date: '2026-01-20',
-    title: 'When to Use React Native vs a Web App',
-    excerpt:
-      "A practical take on choosing the right tool for your project, based on mobile and web apps I've actually shipped.",
-    readTime: '6 min read',
-    tags: ['React Native', 'Web', 'Mobile'],
-  },
-  {
-    id: 4,
-    date: '2026-01-10',
-    title: 'Building CICAMA: Architecture Decisions for a Habit Tracking App',
-    excerpt:
-      'A deep dive into the technical choices behind CICAMA — from state management to the algorithm that keeps users engaged.',
-    readTime: '10 min read',
-    tags: ['React Native', 'Architecture', 'Case Study'],
-  },
-  {
-    id: 5,
-    date: '2025-12-28',
-    title: 'My Semester in Italy: Code, Coffee, and Culture',
-    excerpt:
-      'Reflections on studying Computer Science at Università di Genova and how living abroad changed my perspective on work and life.',
-    readTime: '4 min read',
-    tags: ['Personal', 'Travel'],
-  },
-];
+import { blogEntries } from '../content/blog';
 
 /**
  * Format date for display
@@ -75,9 +26,9 @@ const Blog = () => {
   const filteredEntries = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
     
-    if (!query) return BLOG_ENTRIES;
+    if (!query) return blogEntries;
 
-    return BLOG_ENTRIES.filter(
+    return blogEntries.filter(
       (entry) =>
         entry.title.toLowerCase().includes(query) ||
         entry.excerpt.toLowerCase().includes(query) ||
@@ -104,14 +55,15 @@ const Blog = () => {
         <div className="blog-list">
           {filteredEntries.length > 0 ? (
             filteredEntries.map((entry) => (
-              <BlogListItem
-                key={entry.id}
-                title={entry.title}
-                excerpt={entry.excerpt}
-                date={formatDate(entry.date)}
-                readTime={entry.readTime}
-                tags={entry.tags}
-              />
+              <Link to={`/blog/${entry.slug}`} key={entry.id} className="blog-list-item-link">
+                <BlogListItem
+                  title={entry.title}
+                  excerpt={entry.excerpt}
+                  date={formatDate(entry.date)}
+                  readTime={entry.readTime}
+                  tags={entry.tags}
+                />
+              </Link>
             ))
           ) : (
             <div className="blog-empty">

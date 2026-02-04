@@ -1294,6 +1294,12 @@ footer {
   }
 }
 
+.blog-list-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 /* Small mobile adjustments */
 @media (max-width: 480px) {
   .container {
@@ -1316,6 +1322,131 @@ footer {
   .tag {
     padding: 0.3rem 0.75rem;
     font-size: 0.7rem;
+  }
+}
+.blog-detail {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+}
+
+.blog-detail-header {
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.blog-detail-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+}
+
+/* Markdown Content Styling */
+.blog-detail-content {
+  max-width: 800px;
+  margin: 0;
+}
+
+.md-h1, .md-h2, .md-h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.md-h1 { font-size: 2.5rem; }
+.md-h2 { font-size: 1.8rem; }
+.md-h3 { font-size: 1.5rem; }
+
+.md-p {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.md-ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.md-li {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.md-li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--subtle);
+}
+
+.md-blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 1rem 0 1rem 2rem;
+  margin: 2rem 0;
+  font-style: italic;
+  background: #f9f9f9;
+}
+
+.md-blockquote p {
+  margin-bottom: 0;
+}
+
+.md-img {
+  width: 100%;
+  height: auto;
+  margin: 2.5rem 0;
+  border: 1px solid var(--line);
+}
+
+.blog-detail-footer {
+  margin-top: 5rem;
+  max-width: 800px;
+}
+
+.share-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.back-link-bottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.back-link-bottom:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .blog-detail {
+    padding-top: 6rem;
+  }
+  
+  .blog-detail-title {
+    font-size: 2.5rem;
   }
 }
 
